@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div><br><br>
     <h1>Education</h1>
   </div>
 </template>
