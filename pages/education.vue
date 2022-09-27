@@ -21,13 +21,15 @@
       </span>
     </v-col>
     <v-col>
+      <img src="/Amik.png" width="250"/>
     </v-col>
   </v-row>
-  <br>
+  <br><br>
   <v-divider></v-divider>
-  <br>
+  <br><br>
   <v-row>
     <v-col>
+      <img src="/Putra.png" width="250" />
     </v-col>
     <v-col cols="12" md="9">
       <h2>Computer Network Engineering, SMK Putra Pajajaran</h2>
