@@ -52,6 +52,7 @@
         </v-card>
         </v-col>
         <v-col
+        class="mx-auto"
         cols="12"
         md="7"
         >
@@ -82,13 +83,13 @@
             <v-btn 
             outlined 
             color="secondary"
-            class="mx-auto d-felx justify-center"
+            class="mx-auto d-flex justify-center"
             > 
                 Submit
             </v-btn>
         </v-col>
     </v-row>
-    <br>
+    <br><br>
   </div>
 </div>
 </template>
