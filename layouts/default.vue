@@ -1,7 +1,6 @@
 <template>
   <v-app ligth>
     <v-app-bar
-      :clipped-left="clipped"
       fixed
       app
       elevation="0"
