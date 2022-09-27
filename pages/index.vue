@@ -28,32 +28,14 @@
           elevation="0"
           width="300"
           height="300"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
+          router
         >
-        
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card
-          elevation="0"
-          width="300"
-          height="300"
-          color="grey"
-          class="mx-auto"
-        >
-        
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card
-          elevation="0"
-          width="300"
-          height="300"
-          color="grey"
-          class="mx-auto"
-        >
-        
+          <div class="mx-auto" align="center" >
+            <img src="/projects/1 51.png"  width="250"/>
+          </div>
         </v-card>
       </v-col>
     </v-row>
@@ -74,10 +56,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
         >
-        
+          <div class="mx-auto" align="center" >
+            <img src="/HTML.png"  width="150"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -85,10 +70,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
         >
-        
+          <div class="mx-auto" align="center" >
+            <img src="/CSS.png"  width="150"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -96,10 +84,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
         >
-        
+          <div class="mx-auto" align="center" >
+            <img src="/Javascript-logo.png"  width="150"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -107,10 +98,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
         >
-        
+          <div class="mx-auto" align="center" >
+            <img src="/nodejs.png"  width="180"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -118,10 +112,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
         >
-        
+          <div class="mx-auto" >
+            <img src="/php.png"  width="180"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -129,10 +126,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
-          class="mx-auto"
+          outlined
+          rounded
+          class="mx-auto d-flex align-center"
         >
-        
+          <div class="mx-auto" >
+            <img src="/MySQL.png"  width="180"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -140,10 +140,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
+          outlined
+          rounded
           class="mx-auto"
         >
-        
+          <div class="mx-auto mt-5" align="center" >
+            <img src="/Laravel.svg"  width="150"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -151,10 +154,13 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
+          outlined
+          rounded
           class="mx-auto"
         >
-        
+          <div class="mx-auto mt-5" align="center" >
+            <img src="/Vue.png"  width="180"/>
+          </div>
         </v-card>
       </v-col>
       <v-col>
@@ -162,56 +168,11 @@
           elevation="0"
           width="200"
           height="200"
-          color="grey"
+          outlined
+          rounded
           class="mx-auto"
         >
-        
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          color="grey"
-          class="mx-auto"
-        >
-        
-        </v-card>
-      </v-col>
-    </v-row>
-  </div>
-  <br><br>
-  <div>
-    <v-divider></v-divider>
-  </div>
-  <br><br>
-  <div>
-    <h1 class="text-center"> My Education</h1>
-  </div>
-  <br><br>
-  <div>
-    <v-row>
-      <v-col>
-        <v-card
-          elevation="0"
-          width="500"
-          height="500"
-          color="grey"
-          class="mx-auto"
-        >
-        
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card
-          elevation="0"
-          width="500"
-          height="500"
-          color="grey"
-          class="mx-auto"
-        >
-        
+          <img src="/React.png" width="200"/>
         </v-card>
       </v-col>
     </v-row>
