@@ -191,13 +191,18 @@
       <v-col md="3">
         <v-card 
           elevation="0"
-          width="250"
-          height="200"
-          color="grey"
+          width="220"
+          height="240"
+          rounded
+          outlined
+          class="d-flex align-center ml-5"
         >
+        <div class="mx-auto mt-2" >
+            <img src="/profile.jpeg"  width="200"/>
+          </div>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col class="mr-auto">
         <br>
         <h3>Daffa Erdian Fahrezy</h3>
         <br>
