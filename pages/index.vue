@@ -24,19 +24,62 @@
   <div>
     <v-row>
       <v-col>
-        <v-card
-          elevation="0"
-          width="300"
-          height="300"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-          router
+        <v-hover v-slot="{ hover }">
+          <v-card
+            width="300"
+            height="300"
+            rounded
+            outlined
+            class="mx-auto d-flex align-center"
+            router
+            exact
+            @click.stop="ewalle = true"
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+          >
+            <div class="mx-auto" align="center" >
+              <img src="/projects/1 51.png"  width="250"/>
+            </div>
+          </v-card>
+        </v-hover>
+        <v-dialog
+          v-model="ewalle"
+          max-width="1100"
         >
-          <div class="mx-auto" align="center" >
-            <img src="/projects/1 51.png"  width="250"/>
-          </div>
-        </v-card>
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="ewalle = false"
+                  
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+            <v-row>
+            <v-col cols="12" md="6" class="mt-5">
+              <img src="/projects/walle desktop.png" class="ml-3" width="500">
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-card-title class="text-h5">
+                Wall E - Wallet Electronic
+                
+              </v-card-title>
+                <v-card-subtitle>7 June - 21 July 2022</v-card-subtitle>
+              <v-card-text>
+              Wall E or known as Electronic Wallet is a top up service website using the PPOB tay system commonly known as Payment Point Online banking, which is a 24-hour real-time online bill payment service so that the data and fund reconciliation process can be faster and more accurate and safe.
+              <br><br>
+              This website was created by a team where there are several roles, namely Frontend, Backend, UI UX, Mobile Engineer, QE. Me and myfriend here as a Frontend Engineer Using Nuxt JS.
+              </v-card-text>
+              <v-card-text>
+                <a href="walle-app.netlify.com">Here the Appplication that were builds..</a>
+              </v-card-text>
+            </v-col>
+            </v-row>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog>
       </v-col>
     </v-row>
   </div>
@@ -52,128 +95,166 @@
   <div>
     <v-row>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-        >
-          <div class="mx-auto" align="center" >
-            <img src="/HTML.png"  width="150"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto d-flex align-center"
+            router
+            exact
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="html = true"
+          >
+            <div class="mx-auto" align="center" >
+              <img src="/HTML.png"  width="150"/>
+            </div>
+          </v-card>
+        </v-hover>
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-        >
-          <div class="mx-auto" align="center" >
-            <img src="/CSS.png"  width="150"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto d-flex align-center"
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="css = true"
+          >
+            <div class="mx-auto" align="center" >
+              <img src="/CSS.png"  width="150"/>
+            </div>
+          </v-card>
+        </v-hover> 
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-        >
-          <div class="mx-auto" align="center" >
-            <img src="/Javascript-logo.png"  width="150"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="js = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto d-flex align-center"
+          >
+            <div class="mx-auto" align="center" >
+              <img src="/Javascript-logo.png"  width="150"/>
+            </div>
+          </v-card>
+        </v-hover>
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-        >
-          <div class="mx-auto" align="center" >
-            <img src="/nodejs.png"  width="180"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="node = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto d-flex align-center"
+          >
+            <div class="mx-auto" align="center" >
+              <img src="/nodejs.png"  width="180"/>
+            </div>
+          </v-card>
+        </v-hover>  
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-        >
-          <div class="mx-auto" >
-            <img src="/php.png"  width="180"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="php = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto d-flex align-center"
+          >
+            <div class="mx-auto" >
+              <img src="/php.png"  width="180"/>
+            </div>
+          </v-card>
+        </v-hover>
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto d-flex align-center"
-        >
-          <div class="mx-auto" >
-            <img src="/MySQL.png"  width="180"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="sql = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto d-flex align-center"
+          >
+            <div class="mx-auto" >
+              <img src="/MySQL.png"  width="180"/>
+            </div>
+          </v-card>
+        </v-hover>  
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto"
-        >
-          <div class="mx-auto mt-5" align="center" >
-            <img src="/Laravel.svg"  width="150"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="laravel = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto"
+          >
+            <div class="mx-auto mt-5" align="center" >
+              <img src="/Laravel.svg"  width="150"/>
+            </div>
+          </v-card>
+        </v-hover>  
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto"
-        >
-          <div class="mx-auto mt-5" align="center" >
-            <img src="/Vue.png"  width="180"/>
-          </div>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="vue = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto"
+          >
+            <div class="mx-auto mt-5" align="center" >
+              <img src="/Vue.png"  width="180"/>
+            </div>
+          </v-card>
+        </v-hover>  
       </v-col>
       <v-col>
-        <v-card
-          elevation="0"
-          width="200"
-          height="200"
-          outlined
-          rounded
-          class="mx-auto"
-        >
-          <img src="/React.png" width="200"/>
-        </v-card>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 16 : 0"
+            :class="{ 'on-hover': hover }"
+            @click.stop="react = true"
+            width="200"
+            height="200"
+            outlined
+            rounded
+            class="mx-auto"
+          >
+            <img src="/React.png" width="200"/>
+          </v-card>
+        </v-hover>  
       </v-col>
     </v-row>
   </div>
@@ -222,6 +303,20 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data () {
+      return {
+        ewalle: false,
+        html: false,
+        css: false,
+        js: false,
+        php: false,
+        node: false,
+        sql: false,
+        vue: false,
+        react: false,
+        laravel: false,
+      }
+    },
 }
 </script>
