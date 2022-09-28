@@ -34,7 +34,7 @@
             router
             exact
             @click.stop="ewalle = true"
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
           >
             <div class="mx-auto" align="center" >
@@ -104,7 +104,7 @@
             class="mx-auto d-flex align-center"
             router
             exact
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="html = true"
           >
@@ -113,6 +113,43 @@
             </div>
           </v-card>
         </v-hover>
+        <v-dialog
+          v-model="html"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="html = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                HTML
+                
+              </v-card-title>
+                <v-card-subtitle>Hypertext Markup Language</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="htmlskill"
+                  height="25"
+                  color="orange darken-4"
+                  :active="show"
+                  :indeterminate="query"
+                  :query="true"
+                >
+                  <strong class="white--text">{{ Math.ceil(htmlskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog>
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
@@ -122,7 +159,7 @@
             outlined
             rounded
             class="mx-auto d-flex align-center"
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="css = true"
           >
@@ -130,12 +167,46 @@
               <img src="/CSS.png"  width="150"/>
             </div>
           </v-card>
-        </v-hover> 
+        </v-hover>
+        <v-dialog
+          v-model="css"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="css = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                CSS
+                
+              </v-card-title>
+                <v-card-subtitle>Cascading Style Sheets</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="cssskill"
+                  height="25"
+                  color="blue darken-4"
+                >
+                  <strong class="white--text">{{ Math.ceil(cssskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="js = true"
             width="200"
@@ -149,11 +220,45 @@
             </div>
           </v-card>
         </v-hover>
+        <v-dialog
+          v-model="js"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="js = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                Javascript
+                
+              </v-card-title>
+                <v-card-subtitle>Native Javascript</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="jsskill"
+                  height="25"
+                  color="amber lighten-2"
+                >
+                  <strong class="white--text">{{ Math.ceil(jsskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="node = true"
             width="200"
@@ -167,11 +272,45 @@
             </div>
           </v-card>
         </v-hover>  
+        <v-dialog
+          v-model="node"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="node = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                Node JS
+                
+              </v-card-title>
+                <v-card-subtitle>Node Javascript</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="nodeskill"
+                  height="25"
+                  color="grey darken-4"
+                >
+                  <strong class="white--text">{{ Math.ceil(nodeskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="php = true"
             width="200"
@@ -185,11 +324,45 @@
             </div>
           </v-card>
         </v-hover>
+        <v-dialog
+          v-model="php"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="php = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                php
+                
+              </v-card-title>
+                <v-card-subtitle>Cascading Style Sheets</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="phpskill"
+                  height="25"
+                  color="indigo lighten-2"
+                >
+                  <strong class="white--text">{{ Math.ceil(phpskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="sql = true"
             width="200"
@@ -203,11 +376,45 @@
             </div>
           </v-card>
         </v-hover>  
+        <v-dialog
+          v-model="sql"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="sql = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                MySQL
+                
+              </v-card-title>
+                <v-card-subtitle>Database MySQL</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="sqlskill"
+                  height="25"
+                  color="orange darken-1"
+                >
+                  <strong class="white--text">{{ Math.ceil(sqlskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="laravel = true"
             width="200"
@@ -221,11 +428,45 @@
             </div>
           </v-card>
         </v-hover>  
+        <v-dialog
+          v-model="laravel"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="laravel = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                Laravel
+                
+              </v-card-title>
+                <v-card-subtitle>Framework Laravel PHP</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="laravelskill"
+                  height="25"
+                  color="red darken-1"
+                >
+                  <strong class="white--text">{{ Math.ceil(laravelskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="vue = true"
             width="200"
@@ -238,12 +479,46 @@
               <img src="/Vue.png"  width="180"/>
             </div>
           </v-card>
-        </v-hover>  
+        </v-hover> 
+        <v-dialog
+          v-model="vue"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="vue = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                Vue
+                
+              </v-card-title>
+                <v-card-subtitle>Framework Vue Javascript</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="vueskill"
+                  height="25"
+                  color="green lighten-1"
+                >
+                  <strong class="white--text">{{ Math.ceil(vueskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog>  
       </v-col>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
-            :elevation="hover ? 16 : 0"
+            :elevation="hover ? 8 : 0"
             :class="{ 'on-hover': hover }"
             @click.stop="react = true"
             width="200"
@@ -255,6 +530,40 @@
             <img src="/React.png" width="200"/>
           </v-card>
         </v-hover>  
+        <v-dialog
+          v-model="react"
+          max-width="600"
+        >
+          <v-card>
+            <v-container>
+              <div class="d-flex justify-end">
+                <v-icon
+                  @click="react = false"
+                >
+                  mdi-close
+                </v-icon>
+              </div>
+              <v-card-title class="text-h5">
+                React 
+                
+              </v-card-title>
+                <v-card-subtitle>Framework React Javascript</v-card-subtitle>
+                <v-card-text>
+                <v-progress-linear
+                  v-model="reactskill"
+                  height="25"
+                  color="blue lighten-3"
+                >
+                  <strong class="white--text">{{ Math.ceil(reactskill) }}%</strong>
+                </v-progress-linear>
+                </v-card-text>
+              <v-card-text>
+              
+              </v-card-text>
+            </v-container>
+            <br>
+          </v-card>
+        </v-dialog> 
       </v-col>
     </v-row>
   </div>
@@ -316,6 +625,18 @@ export default {
         vue: false,
         react: false,
         laravel: false,
+        htmlskill: 95,
+        cssskill: 70,
+        jsskill: 70,
+        nodeskill: 80,
+        phpskill: 60,
+        sqlskill: 75,
+        laravelskill: 50,
+        vueskill: 90,
+        reactskill: 60,
+
+        query: false,
+        show: true,
       }
     },
 }

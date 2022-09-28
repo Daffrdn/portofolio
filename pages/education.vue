@@ -21,7 +21,9 @@
       </span>
     </v-col>
     <v-col>
-      <img src="/Amik.png" width="250"/>
+      <a href="https://stmik-amikbandung.ac.id/">
+        <img src="/Amik.png" width="250"/>
+      </a>
     </v-col>
   </v-row>
   <br><br>
