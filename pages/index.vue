@@ -52,6 +52,7 @@
       <v-col cols="12" md="2">
       </v-col>
     </v-row>
+    
     <v-row>
       <v-col>
         <v-hover v-slot="{ hover }">
@@ -102,7 +103,7 @@
               This website was created by a team where there are several roles, namely Frontend, Backend, UI UX, Mobile Engineer, QE. Me and myfriend here as a Frontend Engineer Using Nuxt JS.
               </v-card-text>
               <v-card-text>
-                <a href="walle-app.netlify.com">Here the Appplication that were builds..</a>
+                <a href="https://walle-app.netlify.com">Here the Appplication that were builds..</a>
               </v-card-text>
             </v-col>
             </v-row>
@@ -655,7 +656,7 @@
         <br><br>
         <v-btn 
         icon
-        href="wa.me/0895372254680">
+        href="https://wa.me/0895372254680">
           <v-icon x-large color="black">
               mdi-whatsapp
           </v-icon>
