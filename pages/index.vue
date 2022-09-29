@@ -23,6 +23,36 @@
   <br><br>
   <div>
     <v-row>
+      <v-col cols="12" md="2">
+      </v-col>
+      <v-col cols="12" md="4" align="center">
+        <v-card
+        width="100"
+        router
+        exact
+        @click="ongoing"
+        elevation="0"
+        >
+        <h3>On-Going</h3>
+        <h1>0</h1>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="4" align="center">
+        <v-card
+        width="100"
+        router
+        exact
+        @click="Done"
+        elevation="0"
+        >
+        <h3>Done!</h3>
+        <h1>1</h1>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="2">
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col>
         <v-hover v-slot="{ hover }">
           <v-card
@@ -89,10 +119,35 @@
   </div>
   <br><br>
   <div>
-    <h1 class="text-center"> My Skills</h1>
+    <h1 class="text-center"> My Skills & Experience</h1>
   </div>
   <br><br>
   <div>
+    <v-container>
+    <v-row>
+      <v-col cols="12" md="6" align="center">
+        <strong>Frontend</strong>
+        <v-progress-linear
+          v-model="frontend"
+          height="25"
+          color="teal"
+        >
+          <strong class="white--text">{{ Math.ceil(frontend) }}%</strong>
+        </v-progress-linear>
+      </v-col>
+      <v-col cols="12" md="6" align="center">
+        <strong>Backend</strong>
+        <v-progress-linear
+          v-model="backend"
+          height="25"
+          color="lime"
+        >
+          <strong class="white--text">{{ Math.ceil(backend) }}%</strong>
+        </v-progress-linear>
+      </v-col>
+    </v-row>
+    </v-container>
+    <br>
     <v-row>
       <v-col>
         <v-hover v-slot="{ hover }">
@@ -132,22 +187,20 @@
               </v-card-title>
                 <v-card-subtitle>Hypertext Markup Language</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="htmlskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="htmlskill"
                   color="orange darken-4"
-                  :active="show"
-                  :indeterminate="query"
-                  :query="true"
                 >
-                  <strong class="white--text">{{ Math.ceil(htmlskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ htmlskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
               </v-card-text>
             </v-container>
-            <br>
           </v-card>
         </v-dialog>
       </v-col>
@@ -187,19 +240,20 @@
               </v-card-title>
                 <v-card-subtitle>Cascading Style Sheets</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="cssskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="blue darken-4"
                 >
-                  <strong class="white--text">{{ Math.ceil(cssskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ cssskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
               </v-card-text>
             </v-container>
-            <br>
           </v-card>
         </v-dialog> 
       </v-col>
@@ -239,19 +293,20 @@
               </v-card-title>
                 <v-card-subtitle>Native Javascript</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="jsskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="amber lighten-2"
                 >
-                  <strong class="white--text">{{ Math.ceil(jsskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ jsskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
               </v-card-text>
             </v-container>
-            <br>
           </v-card>
         </v-dialog> 
       </v-col>
@@ -291,19 +346,20 @@
               </v-card-title>
                 <v-card-subtitle>Node Javascript</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="nodeskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="grey darken-4"
                 >
-                  <strong class="white--text">{{ Math.ceil(nodeskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ nodeskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
               </v-card-text>
             </v-container>
-            <br>
           </v-card>
         </v-dialog> 
       </v-col>
@@ -343,19 +399,20 @@
               </v-card-title>
                 <v-card-subtitle>Cascading Style Sheets</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="phpskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="indigo lighten-2"
                 >
-                  <strong class="white--text">{{ Math.ceil(phpskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ phpskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
               </v-card-text>
             </v-container>
-            <br>
           </v-card>
         </v-dialog> 
       </v-col>
@@ -395,19 +452,20 @@
               </v-card-title>
                 <v-card-subtitle>Database MySQL</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="sqlskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="orange darken-1"
                 >
-                  <strong class="white--text">{{ Math.ceil(sqlskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ sqlskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
               </v-card-text>
             </v-container>
-            <br>
           </v-card>
         </v-dialog> 
       </v-col>
@@ -447,13 +505,15 @@
               </v-card-title>
                 <v-card-subtitle>Framework Laravel PHP</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="laravelskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="red darken-1"
                 >
-                  <strong class="white--text">{{ Math.ceil(laravelskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ laravelskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
@@ -499,13 +559,15 @@
               </v-card-title>
                 <v-card-subtitle>Framework Vue Javascript</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="vueskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="green lighten-1"
                 >
-                  <strong class="white--text">{{ Math.ceil(vueskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ vueskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
@@ -549,13 +611,15 @@
               </v-card-title>
                 <v-card-subtitle>Framework React Javascript</v-card-subtitle>
                 <v-card-text>
-                <v-progress-linear
+                <v-progress-circular
                   v-model="reactskill"
-                  height="25"
+                  :width="15"
+                  :size="100"
+                  :value="95"
                   color="blue lighten-3"
                 >
-                  <strong class="white--text">{{ Math.ceil(reactskill) }}%</strong>
-                </v-progress-linear>
+                  <strong>{{ reactskill }}</strong>
+                </v-progress-circular>
                 </v-card-text>
               <v-card-text>
               
@@ -578,31 +642,61 @@
   <br><br>
   <div>
     <v-row>
-      <v-col md="3">
-        <v-card 
-          elevation="0"
-          width="220"
-          height="240"
-          rounded
-          outlined
-          class="d-flex align-center ml-5"
-        >
-        <div class="mx-auto mt-2" >
-            <img src="/profile.jpeg"  width="200"/>
-          </div>
-        </v-card>
+      <v-col cols="12" md="3">
+        <div class="d-flex justify-center mt-2" >
+          <img src="/profile.jpeg"  width="200"/>
+        </div>
       </v-col>
-      <v-col class="mr-auto">
+      <v-col class="mx-auto" cols="12" md="4">
         <br>
         <h3>Daffa Erdian Fahrezy</h3>
         <br>
-        <span>A Frontend Engineer focused  Web Developer building <br>
-        the Frontend of Websites and Web Applications that <br>
-        leads to success of the overall product </span>
+        <span>Hi, My name is Daffa Erdian Fahrezy, im 21 years old, if your need something just call me or text me in the down below... </span>
         <br><br>
-        <a>Read More</a>
+        <v-btn 
+        icon
+        href="wa.me/0895372254680">
+          <v-icon x-large color="black">
+              mdi-whatsapp
+          </v-icon>
+        </v-btn>
+        <v-btn 
+        icon
+        href="https://github.com/Daffrdn">
+          <v-icon x-large color="black">
+              mdi-github
+          </v-icon>
+        </v-btn>
+        <v-btn 
+        icon
+        href="https://www.linkedin.com/in/daffa-erdian-fahrezy-611635148/">
+          <v-icon x-large color="black">
+              mdi-linkedin
+          </v-icon>
+        </v-btn>
+        <v-btn 
+        icon
+        href="https://www.linkedin.com/in/daffa-erdian-fahrezy-611635148/">
+          <v-icon x-large color="black">
+              mdi-gmail
+          </v-icon>
+        </v-btn>
       </v-col>
       <v-col>
+        <div>
+          My Location:
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.091774614524!2d107.60653793998947!3d-6.879608010212437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6f1a2c477bf%3A0x69776f70b1f628e6!2s4JC4%2BC4G%2C%20Hegarmanah%2C%20Cidadap%2C%20Bandung%20City%2C%20West%20Java%2040141!5e0!3m2!1sen!2sid!4v1664260156165!5m2!1sen!2sid" 
+          width="450" 
+          height="200" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          outlined
+          >
+          </iframe>
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -634,6 +728,8 @@ export default {
         laravelskill: 50,
         vueskill: 90,
         reactskill: 60,
+        frontend: 70,
+        backend: 50,
 
         query: false,
         show: true,
