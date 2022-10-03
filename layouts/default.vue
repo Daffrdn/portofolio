@@ -6,40 +6,35 @@
       elevation="0"
       color="white"
     >
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title>
+        <img src="Logo.png" width="50" to="home"/>
+      </v-toolbar-title>
       <v-spacer />
       <v-btn 
        plain
        elevation="0"
-       @click="home"
+       href="#home"
       >
         Home
       </v-btn>
       <v-btn
        plain
        elevation="0"
-       @click="pro"
+       href="#projects"
       >
         Projects
       </v-btn>
       <v-btn
        plain
        elevation="0"
-       @click="exp"
+       href="#skills"
       >
         Experience
       </v-btn>
       <v-btn
        plain
-       elevation="0"
-       @click="edu"
-      >
-        Education
-      </v-btn>
-      <v-btn
-       plain
        elevation="0" 
-       @click="con" 
+       href="#contact"
       >
         Contact
       </v-btn>
@@ -54,42 +49,6 @@
       app
       dark
     >
-      <v-btn 
-       plain
-       elevation="0"
-       @click="home"
-      >
-        Home
-      </v-btn>
-      <v-btn
-       plain
-       elevation="0"
-       @click="pro"
-      >
-        Projects
-      </v-btn>
-      <v-btn
-       plain
-       elevation="0"
-       @click="exp"
-      >
-        Experience
-      </v-btn>
-      <v-btn
-       plain
-       elevation="0"
-       @click="edu"
-      >
-        Education
-      </v-btn>
-      <v-btn
-       plain
-       elevation="0" 
-       @click="con" 
-      >
-        Contact
-      </v-btn>
-      <v-spacer/>
       <span>&copy; {{ new Date().getFullYear() }} Daffa Erdian Fahrezy. Created with Nuxt</span>
     </v-footer>
   </v-app>
