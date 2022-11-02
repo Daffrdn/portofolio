@@ -84,7 +84,6 @@
     <v-divider></v-divider>
   </div>
   <div id="skills">
-  <br><br>
     <Skills/>
   </div>
   <br><br>

@@ -1,7 +1,18 @@
 <template>
 <v-container>
-  <div>
+  <!-- <div>
     <h1 class="text-center"> My Contact</h1>
+  </div> -->
+  <div class="concept concept-six">
+    <h1 class="word">
+    <span class="char">C</span>
+    <span class="char">o</span>
+    <span class="char">n</span>
+    <span class="char">t</span>
+    <span class="char">a</span>
+    <span class="char">c</span>
+    <span class="char">t</span>
+    </h1>
   </div>
   <br><br>
   <div>
@@ -73,6 +84,74 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
-</style>
+.hover,
+.word,
+
+h1 {
+  position: relative  ;
+  color:black;
+}
+.concept {
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+.concept:before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+.concept-six {
+  display: flex;
+  align-items: center;
+}
+.concept-six .word {
+  width: 100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.concept-six .word:hover .char:nth-child(1) {
+  margin-top: -30px;
+  transform: rotate(-20deg);
+}
+.concept-six .word:hover .char:nth-child(2) {
+  margin: -20px 0px 0 10px;
+  transform: rotate(5deg);
+}
+.concept-six .word:hover .char:nth-child(3) {
+  margin: 5px 0 0 10px;
+  transform: rotate(12deg);
+}
+.concept-six .word:hover .char:nth-child(4) {
+  margin: -20px 0 0;
+  transform: rotate(5deg);
+}
+.concept-six .word:hover .char:nth-child(5) {
+  margin: -40px 5px 0;
+  transform: rotate(-10deg);
+}
+.concept-six .word:hover .char:nth-child(6) {
+  margin: -20px 5px 0;
+  transform: rotate(15deg);
+}
+.concept-six .word:hover .char:nth-child(7) {
+  margin: -40px 5px 0;
+  transform: rotate(10deg);
+}
+.concept-six .char {
+  flex: 1;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+</style>>

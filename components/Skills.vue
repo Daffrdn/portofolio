@@ -1,10 +1,28 @@
 <!-- Please remove this file from your project -->
 <template>
 <v-container>
-  <div>
+  <!-- <div>
     <h1 class="text-center"> My Skills & Experience</h1>
+  </div> -->
+  <div class="concept concept-three mr-12">
+    <div class=" word">
+      <div class="hover mx-auto mr-6">
+        <div></div>
+        <div></div>
+        <h1>Skills</h1>
+      </div>
+      <div class="hover mx-auto ml-6">
+        <div></div>
+        <div></div>
+        <h1>&</h1>
+      </div>
+      <div class="hover mx-auto">
+        <div></div>
+        <div></div>
+        <h1>Experience</h1>
+      </div>
+    </div>
   </div>
-  <br><br>
   <div>
     <v-container>
     <v-row>
@@ -560,3 +578,93 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+// .hover,
+// .word,
+
+// h1 {
+//   position: absolute;
+//   color:black;
+// }
+// .concept {
+//   position: relative;
+//   overflow: hidden;
+//   scroll-snap-align: center;
+// }
+// .concept:before {
+//   content: "";
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   opacity: 0;
+//   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+// }
+// .concept:hover:before {
+//   opacity: 0.5;
+// }
+.hover,
+.word,
+h1 {
+  cursor: pointer;
+}
+
+h1 {
+  position: relative;
+  color: #000;
+}
+
+.concept {
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+.concept:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+.concept-three {
+  padding: 5em;
+}
+.concept-three .word {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  margin: auto;
+}
+.concept-three .hover {
+  flex: 1;
+  display: grid;
+  height: calc(5em);
+  grid: repeat(2, 2fr)/100%;
+  position: relative;
+}
+.concept-three .hover div {
+  position: relative;
+  z-index: 5;
+}
+.concept-three .hover div:nth-child(1):hover ~ h1 {
+  margin-top: -10px;
+}
+.concept-three .hover div:nth-child(2):hover ~ h1 {
+  margin-top: -50px;
+}
+.concept-three h1 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -30px;
+  transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 0;
+}
+</style>
