@@ -10,14 +10,13 @@
     </span>
     <br><br><br>
     <v-btn outlined> My Projects</v-btn>
-    <v-btn outlined> Contact Me!</v-btn>
+    <v-btn outlined href="#contact"> Contact Me!</v-btn>
   </div>
   <br><br><br><br><br><br>
   <div>
     <v-divider></v-divider>
   </div>
   <div id="projects">
-  <br><br>
     <Projects/>
     <v-hover v-slot="{ hover }">
       <v-card

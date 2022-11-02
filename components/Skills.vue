@@ -53,7 +53,7 @@
         </v-hover>
         <v-dialog
           v-model="html"
-          max-width="600"
+          max-width="400"
         >
           <v-card>
             <v-container>
@@ -69,17 +69,26 @@
                 
               </v-card-title>
                 <v-card-subtitle>Hypertext Markup Language</v-card-subtitle>
-                <v-card-text>
-                <v-progress-circular
-                  v-model="htmlskill"
-                  :width="15"
-                  :size="100"
-                  :value="htmlskill"
-                  color="orange darken-4"
-                >
-                  <strong>{{ htmlskill }}</strong>
-                </v-progress-circular>
-                </v-card-text>
+                <v-row>
+                  <v-col  cols="12" md="4">
+                    <v-card-text>
+                    <v-progress-circular
+                      v-model="htmlskill"
+                      :width="15"
+                      :size="100"
+                      :value="htmlskill"
+                      color="orange darken-4"
+                    >
+                      <strong>{{ htmlskill }}</strong>
+                    </v-progress-circular>
+                    </v-card-text>
+                  </v-col>
+                  <v-col cols="12" md="8">
+                    <v-card-text>
+                      a line containing HTML version information, a declarative header section (delimited by the HEAD element), a body, which contains the document's actual content.
+                    </v-card-text>
+                  </v-col>
+                </v-row>
               <v-card-text>
               
               </v-card-text>
@@ -106,7 +115,7 @@
         </v-hover>
         <v-dialog
           v-model="css"
-          max-width="600"
+          max-width="400"
         >
           <v-card>
             <v-container>
@@ -122,6 +131,8 @@
                 
               </v-card-title>
                 <v-card-subtitle>Cascading Style Sheets</v-card-subtitle>
+              <v-row>
+                <v-col cols="12" md="4" >
                 <v-card-text>
                 <v-progress-circular
                   v-model="cssskill"
@@ -133,9 +144,13 @@
                   <strong>{{ cssskill }}</strong>
                 </v-progress-circular>
                 </v-card-text>
-              <v-card-text>
-              
-              </v-card-text>
+              </v-col>
+              <v-col cols="12" md="8">
+                <v-card-text>
+                Basic and intermediate css such as, colors, backgrounds, shapes, typography, icons, images, active, hover, and others.
+                </v-card-text>
+              </v-col>
+              </v-row>
             </v-container>
           </v-card>
         </v-dialog> 
